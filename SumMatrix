@@ -1,0 +1,40 @@
+
+public class TwoDimentionalArray {
+
+//	https://github.com/learnspring2023
+		
+	public static void main(String[] args) {
+		
+//		System.out.println((int)(Math.random()*100));
+		int rowCount=3;
+		int colCount=3;
+		int[][] matrix1 = new int[rowCount][colCount]; 
+		int[][] matrix2 = new int[rowCount][colCount]; 
+		int[][] sumMatrix = new int[rowCount][colCount]; 
+		//Create Matrix1
+		System.out.println("M1");
+		for (int i = 0; i < rowCount; i++) {
+			for(int j = 0; j<colCount; j++) {
+				matrix1[i][j] = (int)(Math.random()*100);
+				System.out.println(matrix1[i][j]);
+			}
+		}
+		System.out.println("M2");	
+		//Create Matrix2
+		for (int i = 0; i < rowCount; i++) {
+			for(int j = 0; j<colCount; j++) {
+				matrix2[i][j] = (int)(Math.random()*100);
+				System.out.println(matrix2[i][j]);
+			}
+		}
+		
+		//SumMtraix
+		System.out.println("Sum");
+		for (int i = 0; i < rowCount; i++) {
+			for(int j = 0; j<colCount; j++) {
+				sumMatrix[i][j] = matrix1[i][j]+matrix2[i][j];
+				System.out.println(sumMatrix[i][j]);
+			}
+		}
+	}
+}
