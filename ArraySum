@@ -1,0 +1,21 @@
+
+public class ArraySum {
+
+//	https://github.com/learnspring2023
+		
+	public static void main(String[] args) {
+		int[] arr1 = {11,33,55,99};
+		int[] arr2 = {88,44,33,22,66};
+		int[][] arr3 = {arr1, arr2};
+		
+		int sum=0;
+		for (int i = 0; i < arr3.length; i++) {
+			for(int j = 0; j<arr3[i].length; j++) {
+				sum = sum + arr3[i][j];  
+			}
+		}		
+		System.out.println("Sum= "+sum);
+		
+	}
+	
+}
