@@ -1,0 +1,28 @@
+class DivideByZeroException extends Exception {
+	DivideByZeroException(String message) {
+		super(message);
+	}
+}
+
+public class CustomExceptionDivideByZero {
+public static void main(String[] args) {
+	int num = 0;
+	try {
+		if(num==0) {
+			throw new DivideByZeroException("Learn Maths first");
+		}
+		int result = 10/num;
+	} catch (DivideByZeroException e) {
+		System.out.println("Division Went Wrong");
+		System.out.println(e.getMessage());
+	}  catch (Exception e) {
+		System.out.println("Some thing else");
+	} finally {
+		System.out.println("Time to go home");
+	}
+	
+	
+}
+
+
+}
