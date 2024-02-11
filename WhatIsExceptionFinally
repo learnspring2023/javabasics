@@ -1,0 +1,20 @@
+public class WhatIsException {
+ //Exception Handling
+	public static void main(String[] args) {
+		System.out.println("START");
+		int x = 0;
+			try {
+ 				System.out.println(10/x);
+ 			} catch (Exception e) {
+ 				System.out.println("Its ok to fail");
+ 			} finally {
+ 				System.out.println("Close");
+ 			}
+		System.out.println("Program END");
+
+//		System.out.println(arr.length); //NullPointerException
+//		arr[2]=99;  //ArrayIndexOutOfBoundsException, msg=Index 2 out of bounds for length 2
+//		int result = 10/0; //ArithmeticException, msg=/ by zero
+	}
+	
+}
