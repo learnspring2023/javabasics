@@ -29,12 +29,30 @@ class MyPoint {
 		return "("+this.x+","+this.y+")";
 	}
 	
+	public double distance(int x2, int y2) {
+		return Math.sqrt( Math.pow(x2-this.x,2) + Math.pow(y2-this.y,2) );
+	}
+	
+	public double distance(MyPoint othePoint) {
+		return Math.sqrt( Math.pow(othePoint.x-this.x,2) + Math.pow(othePoint.y-this.y,2) );
+	}
+	
+	public double distance() {
+		return Math.sqrt( this.x*this.x +this.y*this.y );
+	}
 }
 
 public class TestMyPoint {
  public static void main(String[] args) {
-	MyPoint redPoint = new MyPoint(2,3);
-	System.out.println(redPoint); //(0,0)
+	MyPoint redPoint = new MyPoint(2,2);
+	double d = redPoint.distance();
+//	MyPoint greenPoint = new MyPoint(3,3);
+//	double d = redPoint.distance(greenPoint);
+//	 d =redPoint.distance(3, 3);
+	System.out.println(d); 
+
+	
+//(0,0)
 //	MyPoint greenPoint = new MyPoint(2,2);
 //	greenPoint.setXY(3, 2);
 //	int[] points = greenPoint.getXY();
@@ -43,6 +61,3 @@ public class TestMyPoint {
 //	System.out.println(points[0]+","+points[1]);	
  }
 }
-
-
-
