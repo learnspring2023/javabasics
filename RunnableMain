@@ -1,0 +1,29 @@
+package threads;
+
+class MyRunnable implements Runnable {
+	@Override
+	public void run() {
+		System.out.println("Cleaning utencils : "+Thread.currentThread().getName());
+		try {
+			Thread.sleep(1000);  //Waits for a sec
+		} catch (InterruptedException e) {  //Un-checked exception
+			e.printStackTrace();
+		}
+		System.out.println("End of work in Child Thread"+Thread.currentThread().getName());
+	}
+}
+
+public class RunnableMain {
+	public static void main(String[] args) {
+		System.out.println("Cleaning utencils : "+Thread.currentThread().getName());
+		//Lets ask for help - Multithreading
+		//Runnable
+		Thread thread0 = new Thread(new MyRunnable());
+		thread0.start();
+		Thread thread1 = new Thread(new MyRunnable());
+		thread1.start();
+		Thread thread2 = new Thread(new MyRunnable());
+		thread2.start();
+		System.out.println("End of work");
+	}
+}
