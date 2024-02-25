@@ -1,0 +1,38 @@
+package threads;
+
+class MyThreadLab extends Thread {
+	//You give name to thread
+	//Constructor start the thread 
+	MyThreadLab (String name) {
+		super(name);
+		this.start();
+	}
+	
+	@Override
+	public void run() {
+		System.out.println("Cleaning utencils : "+Thread.currentThread().getName());
+		try {
+			Thread.sleep(1000);  //Waits for a second
+		} catch (InterruptedException e) {  //checked exception
+			e.printStackTrace();
+		}
+		System.out.println("End of work in Child Thread"+Thread.currentThread().getName());
+	}
+}
+
+public class ThreadMainLab {
+	public static void main(String[] args) {
+		System.out.println("Cleaning utencils : "+Thread.currentThread().getName());
+		//Lets ask for help - Multi-threading
+		//Runnable
+		int noOfThrfeads = 5;
+		for (int i = 0; i < noOfThrfeads; i++) {
+			new MyThreadLab("RockStarThread=>"+i);
+		}
+//		new MyThreadLab("Sinchu");
+//		new MyThreadLab("Tanu");
+//		new MyThreadLab("Rakshitha");
+//		new MyThreadLab("Ritu");
+		System.out.println("End of work");
+	}
+}
