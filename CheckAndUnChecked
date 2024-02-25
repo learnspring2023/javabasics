@@ -1,0 +1,28 @@
+package threads;
+
+public class CheckAndUnChecked {
+
+	public static void main(String[] args) {
+		//No Handling for unChecked exception
+		unChecked();
+		
+		//Checked exception should be handled
+		try {
+			checked();
+		} catch (Exception e) {
+		System.out.println("Handled Checked Exception");
+		}
+			
+	}
+
+	private static void unChecked() {
+		throw new ArithmeticException(); //UnChecked Exception, Compiler Dosen't Check
+	}
+	
+	private static void checked() throws InterruptedException {
+		throw new InterruptedException(); //Checked Exception, Compiler Check
+	}
+}
+
+// ArithmeticException, ArroutOfBound, Nullpointer --> Compiler dosen't check, Unchecked
+// InterruptedException, IOException -->Compiler check, checked  (Must Handle)
