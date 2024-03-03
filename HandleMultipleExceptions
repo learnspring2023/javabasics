@@ -1,0 +1,33 @@
+package wip;
+
+public class ExceptionBasics {
+
+	public static void main(String[] args) {
+		System.out.println("Start");
+		int[] arr1 = {11,22};
+		int[] arr2 = null;
+		try {
+			int y= arr2.length; //NULL POIINTER
+//			int x = 1/0;
+			System.out.println(arr1[2]); // Handle - Dont terminate
+			System.out.println("After printing");
+		} catch (ArithmeticException e) {
+			System.out.println("Handled Maths Exception");
+			System.out.println(e.getMessage());  
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("Handled Array Exception");
+			System.out.println(e.getMessage());
+		} catch (Exception e) {
+			System.out.println("Handled Unknown Exception");
+			System.out.println(e.getMessage());		 
+		} 
+		finally {
+			System.out.println("Bye bye");
+		}
+		System.out.println("END");
+	}
+  //Exceptions
+  //Try-Catch-Finally
+  //Custom Exceptions - Throw
+  //Checked/Unchecked
+}
