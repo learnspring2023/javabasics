@@ -22,7 +22,7 @@ public interface Reverse {
 		} while(num!=0);
 		System.out.println("Reverse using Do-While: "+reverse);
 
-		//Do while
+		//For
 		num=1234;
 		for(reverse=0;num>0;num/=10) {
 			reverse=reverse*10+num%10;
