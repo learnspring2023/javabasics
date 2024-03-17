@@ -1,0 +1,40 @@
+package loops;
+
+public class Conditions {
+	public static void main(String[] args) {
+		int x = 0;
+		int y = 1;
+		
+//		switch (x){ //Equallity
+//		case 1:
+//			System.out.println("First positive");
+//			break;
+//		case 0:
+//			System.out.println("Zero");
+//			break;
+//		default:
+//			System.out.println("Other numbers");
+//			break;
+//		}
+		
+//		if (x > 0) {
+//			System.out.println("Postive");
+//			if (y > 0) {
+//				System.out.println("Double positive");
+//			}
+//		}
+
+//		if (x ==1) {
+//			System.out.println("First positive");
+//		} else if (x > 0) {
+//			System.out.println("Positive");
+//		} else if (x == 0) {
+//			System.out.println("Neither positive not negative");
+//		} else if (x == -1) {
+//			System.out.println("First negative");
+//		} else {
+//			System.out.println("Negative");
+//		}
+	}
+
+}
