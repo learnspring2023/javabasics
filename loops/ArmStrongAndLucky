@@ -1,0 +1,29 @@
+package loops;
+
+public class ArmStrongAndLucky {
+	public static void main(String[] args) {
+	   int choice = 1;
+	   int number=153;
+		switch (choice) {
+		case 1: 
+			System.out.println(checkArmstrong(number));
+			break;
+		case 2: 
+			checkLucky(number);
+			break;
+		default:
+			System.out.println("Invalid choice");
+		}
+	}
+	
+	static boolean checkArmstrong(int number) {
+		//write logic to armstrong
+		return false;
+	}
+
+	static boolean checkLucky(int number) {
+		//write logic to lucky number
+		return false;
+	}
+
+}
