@@ -1,16 +1,36 @@
 package loops;
 
-public interface ReverseNum {
+public interface Reverse {
 
 	public static void main(String[] args) {
+		//While
 		int num=1234;
+		
 		int reverse=0;
 		while(num!=0) {
 			reverse=reverse*10+num%10;  //432*10 + 1%10 --> 4321
 			num=num/10; //1/10--> 0
-			System.out.println("reverse:"+reverse);
-			System.out.println("num:"+num);
 		}
-		System.out.println(reverse);
+		System.out.println("Reverse using While: "+reverse);
+
+		//Do while
+		num=1234;
+		reverse=0;
+		do {
+			reverse=reverse*10+num%10;
+			num=num/10;
+		} while(num!=0);
+		System.out.println("Reverse using Do-While: "+reverse);
+
+		//Do while
+		num=1234;
+		for(reverse=0;num>0;num/=10) {
+			reverse=reverse*10+num%10;
+		}
+		System.out.println("Reverse using for: "+reverse);
+	
 	}
+
+
+
 }
