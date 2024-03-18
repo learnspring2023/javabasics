@@ -1,0 +1,43 @@
+package Arrays;
+
+public class ArrayBasics {
+	public static void main(String[] args) {
+//		int mob1 = 24324;
+//		int mob2 = 122343455;
+//		int mob3 = 123455555;
+//		int mob4 = 122345555;
+//		int mob5 = 1254323455;
+		
+//		long [] mobileNumbers = {11,22,33,44};
+////		//--> Index           -->0, 1, 2,3
+////		System.out.println(mobileNumbers[3]);
+////		mobileNumbers[0]=99;
+////		System.out.println(mobileNumbers[5]);
+////		System.out.println(mobileNumbers);
+////		System.out.println(mobileNumbers.length);
+//		for (int i = 0; i < mobileNumbers.length; i++) {
+//			System.out.println(mobileNumbers[i]);
+//		}
+		
+		String [] mobileNumbers = {"ABC","XYZ","Name2"};
+		
+		Student s1 = new Student(1,"Stu1");
+		Student s2 = new Student(2,"Stu2");
+		
+		Student [] students = {s1,s2};
+		System.out.println(students[1].name);
+		
+	}
+}
+
+
+
+class Student  {
+	int id;
+	String name;
+	public Student(int id, String name) {
+		this.id=id;
+		this.name=name;
+	}
+	
+}
