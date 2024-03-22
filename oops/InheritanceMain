@@ -1,0 +1,36 @@
+package oop;
+
+public class InheritanceMain {
+	public static void main(String[] args) {
+		EngineeringStudent engineeringStudent = new EngineeringStudent(1);
+//		engineeringStudent.attendClass();
+	}
+}
+
+class Student {
+	int id;
+	Student (int id) {
+		System.out.println("Parent constructor called");
+		this.id =id;
+	}
+	public void attendClass() {
+		System.out.println("Comes to college");
+	}
+}
+
+class EngineeringStudent extends Student {
+	int id;
+	EngineeringStudent(int id) {
+		super(id);
+		this.id=super.id;
+		System.out.println("Child constructror called...");
+	}
+	
+	public void attendClass() {
+		super.attendClass();
+		System.out.println("Goes to class room");
+	}
+}
+
+
+
