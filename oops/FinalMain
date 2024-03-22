@@ -1,0 +1,23 @@
+package oop;
+
+public class FinalMain {
+	// Variable - can't change
+	// Method - can't override in child - subclass
+	// class - cant't create child class
+	public static void main(String[] args) {
+		final int x = 10;
+		x = 1 + 2;
+	}
+}
+
+final class Student {
+	 final void display() {
+		System.out.println("Final metdo in parent");
+	}
+}
+
+class DiplomaStudent extends Student {
+	 void display() {
+		System.out.println("display method in Child");
+	}
+}
