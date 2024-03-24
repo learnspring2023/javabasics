@@ -1,0 +1,49 @@
+package oop;
+
+public class AbstractMain {
+	public static void main(String[] args) {
+		ComputerScienceStudent student = new ComputerScienceStudent("Chetan");
+		student.payFee();
+		student.divideIntoSection();
+		ElectronicsStudent electronicsStudent = new ElectronicsStudent("Ram");
+		electronicsStudent.payFee();
+		electronicsStudent.divideIntoSection();
+	}
+}
+
+
+ abstract class Student {
+	String name;
+	Student(String name) {
+		this.name=name;
+	}
+//	abstract void payFee();
+	void payFee() {
+		System.out.println("Pays fee and, Joins the college");
+	}	
+	abstract void divideIntoSection(); //Implementaion not defined
+//	void divideIntoSection() {
+//		System.out.println("Move to section by name");
+//	}; 
+	//CS divides based on Name alphabet, EC divides based on Marks
+	
+}
+
+class ComputerScienceStudent extends Student {
+	ComputerScienceStudent(String name) {
+		super(name);
+	}
+
+	 void divideIntoSection() {
+		 System.out.println("Based on name");
+	 }
+}
+
+class ElectronicsStudent extends Student {
+	ElectronicsStudent(String name) {
+		super(name);
+	}
+	 void divideIntoSection() {
+		 System.out.println("Based on marks");
+	 }
+}
