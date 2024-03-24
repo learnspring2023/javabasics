@@ -1,0 +1,38 @@
+
+public class EnumMain {
+	public static void main(String[] args) {
+//		Student student = new Student("Chetan", Branch.CS);
+//		Student student2 = new Student("Chetan", Branch.EC);
+//		System.out.println(student.getBranch());
+		for (Branch branch : Branch.values()) {
+			System.out.println("Branch Name:"+branch+" and code is :"+branch.getBranchode());
+//			System.out.println(branch.getBranchode());
+		}
+	}
+}
+
+enum Branch {
+	 EC, CS, EE, CIVIL, MECH, IS;
+
+//	EC(101), CS(102), EE(103), CIVIL(104), MECH(105), IS(106);
+//	private int branchCode;
+//	Branch(int branchCode) {
+//		this.branchCode=branchCode;
+//	}
+//	int getBranchode() {
+//		return this.branchCode;
+//	}
+}
+
+class Student {
+	String name;
+	private Branch branch;
+	Student(String name, Branch branch) {
+		this.name = name;
+		this.branch=branch;
+	}
+	Branch getBranch() {
+		return this.branch;
+	}
+	
+}
