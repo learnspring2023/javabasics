@@ -12,16 +12,16 @@ public class EnumMain {
 }
 
 enum Branch {
-	 EC, CS, EE, CIVIL, MECH, IS;
+//	 EC, CS, EE, CIVIL, MECH, IS;
 
-//	EC(101), CS(102), EE(103), CIVIL(104), MECH(105), IS(106);
-//	private int branchCode;
-//	Branch(int branchCode) {
-//		this.branchCode=branchCode;
-//	}
-//	int getBranchode() {
-//		return this.branchCode;
-//	}
+	EC(101), CS(102), EE(103), CIVIL(104), MECH(105), IS(106);
+	private int branchCode;
+	Branch(int branchCode) {
+		this.branchCode=branchCode;
+	}
+	int getBranchode() {
+		return this.branchCode;
+	}
 }
 
 class Student {
