@@ -1,0 +1,54 @@
+package oop;
+
+public interface InterfaceMain {
+	public static void main(String[] args) {
+		IStudent student = new EngStudent();
+		
+	}
+}
+
+interface IStudent { //100% abstract
+	int COLLEGE_CODE=101; //default public, static, final
+	void attendClass(); // default public abstract 
+	int getResult(int marks);// public abstract
+}
+
+interface Ape {
+	void naughty();
+}
+
+interface Person extends Ape {
+	void learns();
+}
+
+abstract class A {
+	abstract void m();
+	void m2() {
+		System.out.println("m2");
+	}
+	
+}
+
+class EngStudent extends A implements IStudent, Person {
+
+	@Override
+	public void attendClass() {
+		System.out.println("Attend eng class");
+	}
+
+	public int getResult(int marks) {
+		return 9;
+	}
+
+	public void learns() {
+		System.out.println("Person learns");		
+	}
+
+	public void naughty() {
+		System.out.println("Ape is naughty");
+	}
+	void m() {
+	}
+	 
+
+ }
