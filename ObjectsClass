@@ -1,0 +1,47 @@
+package ObjectsClass;
+//equals
+//hashCode -- should match the equals contract
+//toString
+public class ObjectsMain {
+	public static void main(String[] args) {
+		int i = 1;
+		int j = 1;
+		Student student1 = new Student(1,"AB"); //ugq61, 
+		Student student2 = new Student(22,"AB"); //882
+//		System.out.println(i);
+//		System.out.println(j);
+		if(student1.equals(student2)) {
+			System.out.println("Equals");
+		} else {
+			System.out.println("Not equals - objects ");
+		}
+		
+		System.out.println(student1);
+		System.out.println(student2);
+		// Objects, 
+
+//		student.
+		//Object class
+	}
+}
+
+class Student {
+	int id;
+	String name;
+	Student(int id, String name) {
+		this.id=id;
+		this.name=name;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		Student stu = (Student)obj;
+		return this.id==stu.id && this.name.equals(stu.name);
+	}
+
+	@Override
+	public int hashCode() {
+		return this.id;
+	}
+	// If equals() is overridden, override hashCode()
+}
