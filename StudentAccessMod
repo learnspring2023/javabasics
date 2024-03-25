@@ -1,0 +1,28 @@
+package oop;
+
+public class Student {
+	int id; // default - Only inside same package
+	private String branch; // no access anywhere except inside same class 
+	public String name;// anywhere accessible
+	protected int age; //same as default + all child classes in any package
+
+	protected int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	void display () {
+		System.out.println(this.branch);
+	}
+}
+
