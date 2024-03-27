@@ -1,0 +1,26 @@
+package pkg1;
+
+public class StringBuilderMain {
+	public static void main(String[] args) {
+		String str = "ABC";
+		str = "XYZ";
+//		String output = str.concat("XYZ"); //String immutable
+//		System.out.println(str);
+//		System.out.println(output);
+		
+		StringBuffer buffer = null; //new StringBuffer("ABC"); //Mutable
+//		if (buffer!=null) {
+			buffer.append("XYZ");
+			buffer.delete(1, 3);
+			System.out.println(buffer);
+			str = buffer.toString();
+			System.out.println(str);
+			buffer = new StringBuffer("HGJGH");
+			System.out.println(buffer);
+//		}
+		StringBuilder builder  = new StringBuilder("khbksd"); 
+//		builder.ap
+		//non-sync version - faster, data issue if used in multithreading
+
+	}
+}
