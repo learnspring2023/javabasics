@@ -1,0 +1,42 @@
+package exceptions;
+
+public class ExceptionsMain {
+	public static void main(String[] args) {
+		System.out.println("Start");
+//		int[] intArr = {11,22};
+//		System.out.println(intArr[2]);
+//		divide(10,0);
+		String str = "1234A";
+		// Exception Handling
+		int num = 0;
+		try {
+//			str.substring(10);
+//			int x = 1 / 0;
+			num = Integer.parseInt(str);
+			System.out.println("Number successfully parsed");
+		} catch (NumberFormatException e) {
+			System.out.println("Number could not be converted");
+		} catch (ArithmeticException e) {
+			System.out.println("Number Can not be divided");
+		} catch (Exception e) {
+			System.out.println("Some other exception");
+		} 
+		finally {  //Both in case of exception or not
+			System.out.println("Close database connection");
+		}
+		// number could not be parsed, setting num to 0
+		System.out.println("End num=" + num);
+	}
+
+	// Exception is situations where program can not handle while running
+	// Program execution stops
+	// ArithmeticException: / by zero
+	// NullPointerException: Cannot invoke "String.length()" because "str" is null
+	// NumberFormatException: For input string: "1234A"
+	// ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
+	private static void divide(int i, int j) {
+		int res = i / j;
+		System.out.println(res);
+	}
+
+}
