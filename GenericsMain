@@ -1,0 +1,55 @@
+public class GenericsMain {
+	public static void main(String[] args) {
+		// Making class/Method to work with any data type
+		Student[]  students = {new Student(), new Student()};
+		Bank[]  banks = {new Bank(), new Bank()};
+		String[] strings = {"Mys","Blr"};
+		Integer[] numbers = {1,22,33};
+		DataStorage<Student, Double> studentStorage = new DataStorage<>(3.14d, students);
+//		DataStorage<Bank> bankStorage = new DataStorage<>(banks);
+//		DataStorage<String> stringStorage = new DataStorage<>(strings);
+//		DataStorage<Integer> numberStorage = new DataStorage<>(numbers);
+//		
+//		System.out.println(studentStorage.retrieve(0));
+//		System.out.println(studentStorage.retrieve(1));
+//		
+//		System.out.println(bankStorage.retrieve(0));
+//		System.out.println(bankStorage.retrieve(1));
+	}
+}
+
+class Student {
+}
+
+class Bank {
+}
+
+class DataStorage<E,K> { //GENERIC
+	// array of objects, add, retrieve
+	E[] data;
+	K k;
+
+	DataStorage( K k, E[] data) {
+		this.data = data;
+		this.k=k;
+	}
+
+	E retrieve(int index) {
+		return data[index];
+	}
+}
+
+class DataStorage2 { //GENERIC
+	// array of objects, add, retrieve
+	Bank[] data;
+
+	DataStorage2(Bank[] data) {
+		this.data = data;
+	}
+
+	Bank retrieve(int index) {
+		return data[index];
+	}
+}
+//input -> String str = "AABBBC"
+//Output -> "A2B3C1"
