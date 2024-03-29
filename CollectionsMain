@@ -1,0 +1,52 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class CollectionsMain {
+	public static void main(String[] args) {
+//		//Limitation
+//		int[] nums1 = {1,2,3,4,0,0}; //Size is fixed
+//		int[] nums2 = new int[5]; //{0,0,0,0,0}
+//		
+//		String[] strs = {"", ""}; 
+////		E array<STR>  = {} // every data type need seperate varibe --> Homogeneous 
+//		//
+////		nums1[4]=55;
+////		nums2[5]=44;
+
+		ArrayList<Integer> arrayList = new ArrayList<>();
+		arrayList.add(44);
+		arrayList.add(55);
+		arrayList.add(66);
+		System.out.println(arrayList);
+		int res = arrayList.get(0);
+		System.out.println(res);
+		
+		System.out.println("++++++++++++++");
+		for (Integer integer : arrayList) {
+			System.out.println(integer);
+		}
+		
+		int length = arrayList.size();
+		System.out.println(length);
+		
+		System.out.println("-------------");
+		for (int i = 0; i < arrayList.size(); i++) {
+			System.out.println(arrayList.get(i));
+		}
+		
+		//Iterator
+		Iterator iterator = arrayList.iterator();
+		System.out.println("********");
+		
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+		
+//		arrayList.isEmpty();
+//		arrayList.contains(o);
+//		arrayList.isEmpty();
+//		arrayList.indexOf(e);
+//		arrayList.toArray();
+//		arrayList.subList(res, length);
+	}
+}
