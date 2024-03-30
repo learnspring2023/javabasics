@@ -1,0 +1,72 @@
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+import java.util.TreeSet;
+
+class Student1 {
+	int id;
+
+	public Student1(int id) {
+		this.id = id;// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		Student1 other = (Student1) obj;
+		return other.id == this.id;
+	}
+
+	@Override
+	public int hashCode() {
+		return this.id;
+	}
+
+	@Override
+	public String toString() {
+		return "ID="+this.id;
+	}
+}
+
+public class SetMain {
+	public static void main(String[] args) {
+		Student1 s1 = new Student1(11);
+		Student1 s2 = new Student1(1);
+		Student1 s3 = new Student1(21);
+//		Student1 s3 = new Student1(21);
+		Set<Student1> set = new HashSet<>(); // No order - Unordered List
+//		Set<Student1> set = new LinkedHashSet<>(); // insertion order
+//		Set<Student1> set = new TreeSet<>(); // insertion order
+		set.add(s1);
+		set.add(s2);
+		set.add(s3);
+//		set.add(s3);
+		System.out.println(set);
+		// No Duplicates - uses hashCode AND equals both to decide duplicate
+
+//	Set<String> set = new HashSet<>(); //No order - Unordered List
+//	Set<Integer> set = new LinkedHashSet<>(); //Insertion order
+//	Set<Integer> set = new TreeSet<>(); //Sorted order
+//	Set<Integer> set = new TreeSet<>(); //Sorted order
+//	set.add("ZZZ");
+//	set.add("ABC");
+//	set.add("ABC");
+//	set.add(103);
+//	set.add(111);
+//	set.add(121);
+//	
+//	boolean f = set.contains(111);
+//	System.out.println(f);
+//	System.out.println(set.size());
+//	
+//	for (Integer integer : set) {
+//		System.out.println(integer);
+//	}
+//	
+//	System.out.println("++++");
+//	Iterator<Integer> iterable = set.iterator();
+//	while (iterable.hasNext()) {
+//		System.out.println(iterable.next());
+//	}
+
+	}
+}
