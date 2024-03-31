@@ -1,0 +1,82 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapMain {
+	public static void main(String[] args) {
+		// Diction
+		// ant : " Its an insect"
+		// A : Apple
+		// B : Boy
+		// C : Cat
+		// "Chetan": [65,75,85];
+//		HashMap<Character, String> map = new HashMap<>();
+		HashMap<String, ArrayList<Integer>> map = new HashMap<>();
+		ArrayList<Integer> marks1 = new ArrayList<Integer>();
+		marks1.add(65);
+		marks1.add(75);
+		marks1.add(85);
+
+		ArrayList<Integer> marks2 = new ArrayList<Integer>();
+		marks2.add(60);
+		marks2.add(75);
+		marks2.add(89);
+		map.put("Chetan", marks1);
+		map.put("Chitra", marks2);
+//		System.out.println(map);
+
+		// Student map - key - id, Value - Object STudent
+		Map<Integer, Student1> stuMap = new HashMap<Integer, Student1>();
+		Student1 student1 = new Student1(1, "Chetan", marks1);
+		Student1 student2 = new Student1(2, "Chitra", marks2);
+		stuMap.put(student1.id, student1);
+		stuMap.put(student2.id, student2);
+		System.out.println(stuMap);
+//		map.put('A', "Apple");
+//		map.put('B', "Boy");
+//		map.put('C', "Cat");
+//		map.put('D', "Cat");
+//		System.out.println(map);
+////		String value = map.get('C');
+//		String value = map.get('X');
+//		if (value != null) {
+//			System.out.println(value.length());
+//		} else {
+//			System.out.println("Value not found");
+//		}
+//
+////		Set<Entry<Character, String>> enstrySet = map.entrySet();
+//		for (Entry<Character, String> entry : map.entrySet()) {
+//			Character key = entry.getKey();
+//			String val = entry.getValue();
+//			System.out.println("Key=" + key + ",Value=" + val);
+//		}
+//		
+//		Set<Character> keySet = map.keySet();
+//		System.out.println(keySet);
+//		
+//		Collection<String> values = map.values();
+//		System.out.println(values);
+
+	}
+
+}
+
+class Student1 {
+	int id;
+	String name;
+	ArrayList<Integer> marks;
+
+	public Student1(int id, String name, ArrayList<Integer> marks) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.marks = marks;
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Name=" + this.name + "," + "Marks=" + this.marks;
+	}
+}
